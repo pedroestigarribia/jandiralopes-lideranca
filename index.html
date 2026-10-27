@@ -5,24 +5,31 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <script>document.documentElement.classList.add('js');</script>
 
-  <title>AME Treinamentos | Liderança e Desenvolvimento Corporativo</title>
+  <title>AME Treinamentos | Treinamentos Corporativos e Liderança</title>
   <meta name="description" content="Treinamentos corporativos, palestras e desenvolvimento de lideranças para empresas. Conheça as soluções da AME Treinamentos e solicite uma proposta.">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta name="theme-color" content="#101941">
   <link id="canonicalLink" rel="canonical" href="https://ametreinamentos.com.br/">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="AME Treinamentos | Liderança e Desenvolvimento Corporativo">
-  <meta property="og:description" content="Desenvolvimento humano, liderança e treinamentos para empresas, profissionais e equipes.">
+  <meta property="og:title" content="AME Treinamentos | Treinamentos Corporativos e Liderança">
+  <meta property="og:description" content="Treinamentos corporativos, palestras e desenvolvimento de lideranças para empresas. Conheça as soluções da AME Treinamentos e solicite uma proposta.">
   <meta property="og:url" content="https://ametreinamentos.com.br/">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:site_name" content="AME Treinamentos">
+  <meta property="og:image" content="https://ametreinamentos.com.br/assets/ame-social.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Símbolo e nome da AME Treinamentos">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="AME Treinamentos | Liderança e Desenvolvimento Corporativo">
-  <meta name="twitter:description" content="Treinamentos, palestras e desenvolvimento de lideranças para empresas.">
+  <meta name="twitter:title" content="AME Treinamentos | Treinamentos Corporativos e Liderança">
+  <meta name="twitter:description" content="Treinamentos corporativos, palestras e desenvolvimento de lideranças para empresas. Conheça as soluções da AME Treinamentos e solicite uma proposta.">
+  <meta name="twitter:image" content="https://ametreinamentos.com.br/assets/ame-social.jpg">
+  <meta name="twitter:image:alt" content="Símbolo e nome da AME Treinamentos">
 
-  <link id="brandFavicon" rel="icon" type="image/png" href="data:,">
+  <link id="brandFavicon" rel="icon" type="image/png" sizes="512x512" href="assets/ame-icon.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1486,15 +1493,16 @@
           name: siteData.founder,
           jobTitle: "Fundadora e CEO da AME Treinamentos",
           description: "Fundadora da AME Treinamentos e profissional de desenvolvimento humano e liderança.",
-          sameAs: [siteData.instagram]
+          sameAs: [siteData.instagram],
+          worksFor: !isPlaceholder(siteData.siteUrl) ? { "@id": `${siteData.siteUrl}#organization` } : undefined
         },
         {
-          "@type": "ProfessionalService",
-          "@id": !isPlaceholder(siteData.siteUrl) ? `${siteData.siteUrl}#service` : undefined,
+          "@type": "Organization",
+          "@id": !isPlaceholder(siteData.siteUrl) ? `${siteData.siteUrl}#organization` : undefined,
           name: siteData.name,
           description: "Treinamentos corporativos, palestras e desenvolvimento de pessoas e lideranças.",
           url: !isPlaceholder(siteData.siteUrl) ? siteData.siteUrl : undefined,
-          sameAs: [siteData.instagram]
+          logo: !isPlaceholder(siteData.siteUrl) ? `${siteData.siteUrl}assets/ame-icon.png` : undefined
         },
         {
           "@type": "FAQPage",
@@ -1992,7 +2000,7 @@
     }
 
     function initApp() {
-      document.getElementById("brandFavicon").href = document.querySelector(".brand__logo").src;
+
       initReducedMotion();
       applySiteData();
       initNavigation();
