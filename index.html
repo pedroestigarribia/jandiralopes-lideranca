@@ -17,17 +17,17 @@
   <meta property="og:url" content="https://ametreinamentos.com.br/">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:site_name" content="AMETREINAMENTOS">
-  <meta property="og:image" content="https://ametreinamentos.com.br/assets/ame-social.jpg">
-  <meta property="og:image:type" content="image/jpeg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Símbolo e nome AMETREINAMENTOS em uma linha">
+  <meta property="og:image" content="https://ametreinamentos.com.br/assets/ame-logo.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="3125">
+  <meta property="og:image:height" content="3125">
+  <meta property="og:image:alt" content="Logo original da AME Treinamentos com símbolo, AME e TREINAMENTOS">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="AMETREINAMENTOS | Treinamentos Corporativos e Liderança">
   <meta name="twitter:description" content="Treinamentos corporativos, palestras e desenvolvimento de lideranças para empresas. Conheça as soluções da AMETREINAMENTOS e solicite uma proposta.">
-  <meta name="twitter:image" content="https://ametreinamentos.com.br/assets/ame-social.jpg">
-  <meta name="twitter:image:alt" content="Símbolo e nome AMETREINAMENTOS em uma linha">
+  <meta name="twitter:image" content="https://ametreinamentos.com.br/assets/ame-logo.png">
+  <meta name="twitter:image:alt" content="Logo original da AME Treinamentos com símbolo, AME e TREINAMENTOS">
 
   <link id="brandFavicon" rel="icon" type="image/png" sizes="512x512" href="assets/ame-icon.png">
 
@@ -1157,7 +1157,7 @@
     .hero__title .accent { color:var(--gold); }
     .ame-hero-card { position:relative; min-height:460px; display:flex; flex-direction:column; justify-content:space-between; padding:clamp(28px,4vw,55px); border:1px solid rgba(247,244,239,.25); background:linear-gradient(145deg,rgba(123,63,155,.72),rgba(16,25,65,.96)); box-shadow:var(--shadow); }
     .ame-hero-card::before { content:""; position:absolute; top:0; right:0; width:74px; height:5px; background:var(--gold); }
-    .ame-hero-logo { width:100%; aspect-ratio:3; overflow:hidden; margin:20px 0; }
+    .ame-hero-logo { width:min(100%,300px); aspect-ratio:1; overflow:hidden; margin:20px auto; background:var(--ink); }
     .ame-hero-logo img { width:100%; height:100%; object-fit:contain; }
     .ame-hero-card p { margin:70px 0 50px; font-family:var(--serif); font-size:clamp(3rem,4.8vw,5.5rem); line-height:.95; }
     .ame-hero-card em { color:var(--gold); font-style:italic; }
@@ -1250,7 +1250,7 @@
           </div>
         </div>
         <aside class="ame-hero-card" aria-label="Áreas de atuação da AME">
-          <div><span class="mono-label">Desenvolvimento que faz sentido</span><div class="ame-hero-logo"><img src="assets/ame-logo.png" width="1800" height="600" alt="Símbolo e nome AMETREINAMENTOS" decoding="async" fetchpriority="high"></div></div>
+          <div><span class="mono-label">Desenvolvimento que faz sentido</span><div class="ame-hero-logo"><img src="assets/ame-logo.png" width="3125" height="3125" alt="Logo original da AME Treinamentos com símbolo, AME e TREINAMENTOS" decoding="async" fetchpriority="high"></div></div>
           <div class="ame-hero-card__tags"><span>Liderança</span><span>Comunicação</span><span>Equipes</span><span>Desenvolvimento</span></div>
         </aside>
       </div>
@@ -1502,7 +1502,7 @@
           name: siteData.name,
           description: "Treinamentos corporativos, palestras e desenvolvimento de pessoas e lideranças.",
           url: !isPlaceholder(siteData.siteUrl) ? siteData.siteUrl : undefined,
-          logo: !isPlaceholder(siteData.siteUrl) ? `${siteData.siteUrl}assets/ame-icon.png` : undefined
+          logo: !isPlaceholder(siteData.siteUrl) ? `${siteData.siteUrl}assets/ame-logo.png` : undefined
         },
         {
           "@type": "FAQPage",
